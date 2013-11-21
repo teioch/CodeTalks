@@ -161,20 +161,23 @@ public class Board {
     }
 
     public void printBoard(){
-        System.out.println("------------------------------------");
+        System.out.println("-----------------------------");
         for(int y = 0; y < height; y++){
             for(int x = 0; x < width; x++){
                 if(board[y][x] == -1){
-                    System.out.print("| " + board[y][x] + " ");
+                    System.out.print("| X ");
+                }
+                else if(board[y][x] == 1){
+                    System.out.print("| O ");
                 }
                 else{
-                    System.out.print("|  " + board[y][x] + " ");
+                    System.out.print("|   ");
                 }
             }
             System.out.println("|");
-            System.out.println("------------------------------------");
+            System.out.println("-----------------------------");
         }
-        System.out.println("------------------------------------");
-        System.out.println("|  1 |  2 |  3 |  4 |  5 |  6 |  7 |");
+        System.out.println("-----------------------------");
+        System.out.println("| 1 | 2 | 3 | 4 | 5 | 6 | 7 |");
     }
 }
